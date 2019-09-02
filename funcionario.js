@@ -33,4 +33,5 @@ var empresa;
         };
         return Funcionario;
     }(empresa.Pessoa));
+    empresa.Funcionario = Funcionario;
 })(empresa || (empresa = {}));

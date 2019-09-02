@@ -1,6 +1,6 @@
 ///<reference path="pessoa.ts" />
 namespace empresa{
-    class Cliente extends Pessoa{
+    export class Cliente extends Pessoa{
         private _codCliente:number;
         private _credito:number;
 

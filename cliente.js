@@ -33,4 +33,5 @@ var empresa;
         };
         return Cliente;
     }(empresa.Pessoa));
+    empresa.Cliente = Cliente;
 })(empresa || (empresa = {}));
