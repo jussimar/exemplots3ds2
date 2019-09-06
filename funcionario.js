@@ -31,6 +31,12 @@ var empresa;
         Funcionario.prototype.setSetor = function (setor) {
             this._setor = setor;
         };
+        Funcionario.prototype.getBanco = function () {
+            return this._banco;
+        };
+        Funcionario.prototype.setBanco = function (banco) {
+            this._banco = banco;
+        };
         return Funcionario;
     }(empresa.Pessoa));
     empresa.Funcionario = Funcionario;

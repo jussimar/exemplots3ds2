@@ -31,6 +31,12 @@ var empresa;
         Cliente.prototype.setCredito = function (credito) {
             this._credito = credito;
         };
+        Cliente.prototype.getBanco = function () {
+            return this._banco;
+        };
+        Cliente.prototype.setBanco = function (banco) {
+            this._banco = banco;
+        };
         return Cliente;
     }(empresa.Pessoa));
     empresa.Cliente = Cliente;
