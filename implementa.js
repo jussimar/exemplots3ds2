@@ -28,9 +28,10 @@ var empresa;
     document.getElementById("banco").textContent = cliente.getBanco().getNome();
     banco.addCliente(cliente);
     banco.addCliente(cliente2);
-    document.getElementById("chama").addEventListener("click", function () {
-        banco.getClientes().forEach(function (element) {
-            alert("Cliente: " + element.getNome() + " Banco: " + element.getBanco().getNome());
-        });
+    var tabela = document.getElementById("tabela");
+    var conteudo = " <tr> <th>Cliente</th> <th>Banco</th> </tr>";
+    banco.getClientes().forEach(function (element) {
+        conteudo += "<tr> <td>" + element.getNome() + "</td><td>" + element.getBanco().getNome() + "</td></tr>";
     });
+    tabela.innerHTML = conteudo;
 })(empresa || (empresa = {}));

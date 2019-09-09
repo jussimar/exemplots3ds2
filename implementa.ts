@@ -32,12 +32,16 @@ namespace empresa{
     banco.addCliente(cliente);
     banco.addCliente(cliente2);
 
-    document.getElementById("chama").addEventListener("click",function(){
-        banco.getClientes().forEach(element => {
-            alert("Cliente: "+element.getNome() + " Banco: " + element.getBanco().getNome());
-        });
-        
+
+    //trecho inserido para exemplificar a implentação das tabelas
+    let tabela = document.getElementById("tabela");
+    
+    let conteudo = " <tr> <th>Cliente</th> <th>Banco</th> </tr>";
+    banco.getClientes().forEach(element => {
+        conteudo += "<tr> <td>"+element.getNome()+"</td><td>"+ element.getBanco().getNome()+"</td></tr>";
     });
+    tabela.innerHTML = conteudo;
+   
    
 
 }
