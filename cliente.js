@@ -19,6 +19,9 @@ var empresa;
         function Cliente() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
+        Cliente.prototype.mostraConta = function (codCliente) {
+            return codCliente + "Sua Conta";
+        };
         Cliente.prototype.getCodCliente = function () {
             return this._codCliente;
         };

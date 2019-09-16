@@ -26,8 +26,11 @@ var empresa;
     document.getElementById("codigo").textContent = cliente.getCodCliente().toString();
     document.getElementById("credito").textContent = cliente.getCredito().toString();
     document.getElementById("banco").textContent = cliente.getBanco().getNome();
+    //metodo recebido da interface
+    document.getElementById("conta").textContent = cliente.mostraConta(cliente.getCodCliente());
     banco.addCliente(cliente);
     banco.addCliente(cliente2);
+    //trecho inserido para exemplificar a implentação das tabelas
     var tabela = document.getElementById("tabela");
     var conteudo = " <tr> <th>Cliente</th> <th>Banco</th> </tr>";
     banco.getClientes().forEach(function (element) {

@@ -13,6 +13,7 @@ namespace empresa{
     cliente.setIdade(30);
     cliente.setCredito(2000);
     cliente.setBanco(banco);
+    
 
     let cliente2 = new Cliente();
     cliente2.setNome("Maria");
@@ -22,12 +23,15 @@ namespace empresa{
     cliente2.setCredito(3000);
     cliente2.setBanco(banco);
 
+
     document.getElementById("nome").textContent = cliente.getNome();
     document.getElementById("idade").textContent = cliente.getIdade().toString();
     document.getElementById("cpf").textContent = cliente.getCpf();
     document.getElementById("codigo").textContent = cliente.getCodCliente().toString();
     document.getElementById("credito").textContent = cliente.getCredito().toString();
     document.getElementById("banco").textContent = cliente.getBanco().getNome();
+    //metodo recebido da interface
+    document.getElementById("conta").textContent = cliente.mostraConta(cliente.getCodCliente());
     
     banco.addCliente(cliente);
     banco.addCliente(cliente2);

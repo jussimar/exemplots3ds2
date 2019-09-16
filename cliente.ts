@@ -1,9 +1,13 @@
 ///<reference path="pessoa.ts" />
 namespace empresa{
-    export class Cliente extends Pessoa{
+    export class Cliente extends Pessoa implements IConta{
         private _codCliente:number;
         private _credito:number;
         private _banco:Banco;
+
+        mostraConta(codCliente:number){
+            return codCliente + "Sua Conta";
+        }
 
         public getCodCliente(){
             return this._codCliente;
